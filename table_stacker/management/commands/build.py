@@ -13,8 +13,6 @@ from django.test.client import RequestFactory
 from django.core.management.base import BaseCommand
 from table_stacker import views, api, feeds, sitemaps
 
-
-
 class YAMLDoesNotExistError(Exception):
     """
     Called when you try to open a YAML that doesn't exist.

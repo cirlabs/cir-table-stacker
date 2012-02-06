@@ -37,22 +37,6 @@
 {% endblock %}
 
 {% block headline %}
-    <div id="share">
-        <ul>
-            <li>
-                <a data-text="" href="http://twitter.com/share" class="twitter-share-button"
-                    data-count="horizontal">Tweet</a>
-                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-            </li>
-            <li>
-                <g:plusone size="medium"></g:plusone>
-            </li>
-            <li>
-                <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=161694630579757&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="90" show_faces="false" font=""></fb:like>
-            </li>
-        </ul>
-    </div>
-    <h4 id="kicker">{% if object.kicker %}{{ object.kicker|safe }}{% else %}Spreadsheet{% endif %}</h4>
     <h1 id="title">{{ object.title|safe }}</h1>
 {% endblock %}
 
@@ -91,11 +75,6 @@
                 <span class="pagedisplay"/>1/{{ table.total_pages }}</span>
                 <img src="{{ STATIC_URL }}img/next.png" class="next">
                 <img src="{{ STATIC_URL }}img/last.png" class="last">
-                <select class="pagesize">
-                    {% for page_size in table.page_size_list %}
-                    <option {% if forloop.first %}selected="selected"{% endif %} value="{{ page_size }}">{{ page_size }}</option>
-                    {% endfor %}
-                </select> per page
               </form>
             </div>
         </div>

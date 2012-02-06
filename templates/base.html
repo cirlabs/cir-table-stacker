@@ -27,11 +27,26 @@
         {% if site_name %}<meta property="og:site_name" content="{{ site_name }}"/>{% endif %}
         {% if facebook_admins %}<meta property="fb:admins" content="{{ facebook_admins }}"/>{% endif %}
     {% endblock %}
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2147301-14']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
     
   </head>
   <body>
     <div class="container">
-        <div id="header" class="span-24 last serif">  
+        <div id="header" class="span-24 last serif">
+              <div id="logo" style="float:right;"><a href="http://www.californiawatch.org" target="_blank" id="logo"><img src="{{ MEDIA_URL }}cawatch_logo.gif" width="244" height="28.5" alt="California Watch" /></a></div>
               {% block headline %}{% endblock %}
         </div>
         <hr style="margin:0;" />
