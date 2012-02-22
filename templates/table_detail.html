@@ -75,6 +75,11 @@
                 <span class="pagedisplay"/>1/{{ table.total_pages }}</span>
                 <img src="{{ STATIC_URL }}img/next.png" class="next">
                 <img src="{{ STATIC_URL }}img/last.png" class="last">
+                <select class="pagesize" style="display:none !important;">
+                    {% for page_size in table.page_size_list %}
+                    <option {% if forloop.first %}selected="selected"{% endif %} value="{{ page_size }}">{{ page_size }}</option>
+                    {% endfor %}
+                </select>
               </form>
             </div>
         </div>
