@@ -94,8 +94,8 @@ class Command(BaseCommand):
         rf = RequestFactory()
         
         # Build index page
-        self.stdout.write("Building table lists\n")
-        views.TableListView().build_queryset()
+        #self.stdout.write("Building table lists\n")
+        #views.TableListView().build_queryset()
         
         # Build table detail pages
         self.stdout.write("Building table detail pages\n")

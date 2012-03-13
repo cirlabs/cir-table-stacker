@@ -57,7 +57,7 @@
     <div id="ribbon">
     
         <div id="download">
-            Published: <div id="pubdate">{{ object.publication_date|date:"N j, Y" }}</div>&nbsp;&nbsp;
+            Published <div id="pubdate">{{ object.publication_date|date:"N j, Y" }}</div>&nbsp;&nbsp;
              {% if object.show_download_links %}
             Download:
             <a href="{{ object.get_csv_url }}">CSV</a> |

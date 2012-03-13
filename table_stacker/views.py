@@ -59,9 +59,9 @@ class TableDetailView(DetailView):
         # Render the detail page HTML
         html = self.get(self.request).render().content
         # Create the path to save the flat file
-        path = os.path.join(settings.BUILD_DIR, obj.slug)
-        os.path.exists(path) or os.makedirs(path)
-        path = os.path.join(path, 'index.html')
+        path = os.path.join(settings.BUILD_DIR, 'index.html')
+        #os.path.exists(path) or os.makedirs(path)
+        #path = os.path.join(path, 'index.html')
         # Write out the data
         outfile = open(path, 'w')
         outfile.write(html)

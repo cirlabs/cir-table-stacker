@@ -14,8 +14,9 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns("",
-    # Homepage
-    url(r'^$', views.TableListView.as_view(), name='table-list'),
+    # Homepage: redirected to first item
+    #url(r'^$', views.TableListView.as_view(), name='table-list'),
+    url(r'^$', views.TableDetailView.as_view(), {'slug':Table.objects.get(pk=1)}, name='table-detail'),
     
     # Serialization
     url(r'^api/(?P<slug>[-\w]+).xls$', api.TableDetailXLSView.as_view(),

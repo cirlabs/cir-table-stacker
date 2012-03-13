@@ -45,15 +45,15 @@
   </head>
   <body>
     <div class="container">
-        <div id="header" class="span-24 last serif">
-              <div id="logo" style="float:right;"><a href="http://www.californiawatch.org" target="_blank" id="logo"><img src="{{ MEDIA_URL }}cawatch_logo.gif" width="244" height="28.5" alt="California Watch" /></a></div>
+        <div id="header" class="last serif">
+              <div id="logo" style="float:right;"><a href="http://www.californiawatch.org" target="_blank" id="logo"><img src="{{ MEDIA_URL }}cawatch_logo.gif" width="225" alt="California Watch" /></a></div>
               {% block headline %}{% endblock %}
         </div>
         <hr style="margin:0;" />
-        <div id="content" class="span-24 sans">
+        <div id="content" class="sans">
           {% block content %}{% endblock %}
         </div>
-        <div id="footer" class="span-24 last" style="padding:10px 0; font-size:12px;">  
+        <div id="footer" class="last" style="padding:10px 0; font-size:12px;">  
               {% block footer %}
               <center>This is Table Stacker. It publishes spreadsheets. You can build your own in minutes. <a target="_blank" href="https://github.com/datadesk/latimes-table-stacker">Here's how</a>.</center>
               {% endblock %}
