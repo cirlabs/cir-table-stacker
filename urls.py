@@ -1,5 +1,6 @@
 from django.conf import settings
 from table_stacker import views, api, feeds, sitemaps
+from table_stacker.models import Table
 from django.conf.urls.defaults import patterns, include, url
 
 
@@ -14,7 +15,7 @@ urlpatterns = patterns('',
 
     
     # Homepage
-    url(r'^$', views.TableListView.as_view(), name='table-list'),
+    #url(r'^$', views.TableListView.as_view(), name='table-list'),
     
     # Serialization
     url(r'^api/(?P<slug>[-\w]+).xls$', api.TableDetailXLSView.as_view(),
@@ -30,7 +31,7 @@ urlpatterns = patterns('',
     url(r'^sitemap.xml$', sitemaps.SitemapView.as_view(), name='sitemap'),
     
     # Table detail
-    url(r'^(?P<slug>[-\w]+)/$', views.TableDetailView.as_view(),
+    url(r'^$', views.TableDetailView.as_view(), {'slug':Table.objects.get(pk=1).slug},
         name='table-detail'),
 )
 
