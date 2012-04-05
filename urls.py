@@ -33,5 +33,8 @@ urlpatterns = patterns('',
     # Table detail
     url(r'^$', views.TableDetailView.as_view(), {'slug':Table.objects.get(pk=1).slug},
         name='table-detail'),
+   
+    # Table detail old
+    url(r'^(?P<slug>[-\w]+)/$', views.TableDetailView.as_view(), name='table-detail-old'),
 )
 
