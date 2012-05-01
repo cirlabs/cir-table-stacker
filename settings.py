@@ -1,7 +1,7 @@
 import os
 import yaml
 
-AWS_BUCKET_NAME = 'tables.cironline.org'
+AWS_BUCKET_NAME = 'tables-test.cironline.org'
 ROOT_PATH = os.path.dirname(__file__)
 TEMPLATE_DIRS = (
     os.path.join(ROOT_PATH, 'templates'),
@@ -11,7 +11,7 @@ CSV_DIR = os.path.join(ROOT_PATH, 'csv')
 BUILD_DIR = os.path.join(ROOT_PATH, 'build')
 BAKERY_VIEWS = [
     'table_stacker.views.TableDetailView',
-    'table_stacker.views.TableListView',
+    #'table_stacker.views.TableListView',
     'table_stacker.sitemaps.SitemapView',
     'table_stacker.feeds.LatestTablesFeed',
     'table_stacker.api.TableDetailCSVView',

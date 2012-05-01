@@ -31,10 +31,9 @@ urlpatterns = patterns('',
     url(r'^sitemap.xml$', sitemaps.SitemapView.as_view(), name='sitemap'),
     
     # Table detail
-    url(r'^$', views.TableDetailView.as_view(), {'slug':Table.objects.get(pk=1).slug},
-        name='table-detail'),
+    #url(r'^$', views.TableDetailView.as_view(), {'slug':Table.objects.get(pk=1).slug}, name='table-detail'),
    
     # Table detail old
-    url(r'^(?P<slug>[-\w]+)/$', views.TableDetailView.as_view(), name='table-detail-old'),
+    url(r'^(?P<slug>[-\w]+)/$', views.TableDetailView.as_view(), name='table-detail'),
 )
 

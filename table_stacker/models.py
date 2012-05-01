@@ -45,7 +45,7 @@ class Table(models.Model):
     
     @models.permalink
     def get_absolute_url(self):
-        return ('table-detail-old', [self.slug,])
+        return ('table-detail', [self.slug,])
     
     @models.permalink
     def get_csv_url(self):
