@@ -1,7 +1,7 @@
 import os
 import yaml
 
-AWS_BUCKET_NAME = 'tables-test.cironline.org'
+AWS_BUCKET_NAME = 'tables.cironline.org'
 ROOT_PATH = os.path.dirname(__file__)
 TEMPLATE_DIRS = (
     os.path.join(ROOT_PATH, 'templates'),
