@@ -22,6 +22,71 @@ h2. Resources
 * Working demonstration at "http://table-stacker.s3-website-us-west-1.amazonaws.com/":http://table-stacker.s3-website-us-west-1.amazonaws.com/
 
 
+h2. Getting started - setting up Tablestacker for the first time
 
+h3. Requirements
 
+* Homebrew (needed to install pip on a Mac)
+* git
+* pip
+* python
+* virtualenvwrapper
+* s3cmd
 
+h3. Install the code on your computer
+
+Create a virtual environment to store your application. We do this with virtualenvwrapper, which creates a walled-off garden for the Python code to work without distraction from the outside world. If you don’t have it, you’ll need to install it now.
+
+<pre><code>
+$ pip install virtualenv
+# Or maybe ...
+$ sudo easy_install install virtualenv
+# Or, if you're in Ubuntu ...
+$ sudo apt-get install python-virtualenv
+</code></pre>
+
+Now create a virtualenv for tablestacker.
+
+<pre><code>
+$ mkvirtualenv cir-table-stacker
+</code></pre>
+
+Now jump into the directory it creates.
+
+<pre><code>
+$ cd my-table-stacker
+</code></pre>
+
+Activate the virtual environment.
+
+<pre><code>
+$ workon cir-table-stacker
+</code></pre>
+
+Download the latest version of the code repository into a directory called project.
+
+<pre><code>
+$ git clone git://github.com/cirlabs/cir-table-stacker.git project
+</code></pre>
+
+And jump in and get ready to work.
+
+<pre><code>
+$ cd project
+</code></pre>
+
+Install our app’s Python dependencies.
+
+<pre><code>
+$ pip install -r requirements.txt
+</code></pre>
+
+Create the project’s database
+
+<pre><code>
+$ python manage.py syncdb
+</code></pre>
+
+At this point the workflow is the same as for the original tablestacker, maintained by the LA Times datadesk.
+
+[Go here](http://datadesk.github.com/latimes-table-stacker/#getting-started), then scroll down to <strong>"02. Build the example tables"</strong>
