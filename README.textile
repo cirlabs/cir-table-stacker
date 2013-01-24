@@ -81,4 +81,4 @@ Create the project’s database
 
 At this point the workflow is the same as for the original tablestacker, maintained by the LA Times datadesk.
 
-[Go here](http://datadesk.github.com/latimes-table-stacker/#getting-started), then scroll down to <strong>"02. Build the example tables"</strong>
+Go here (http://datadesk.github.com/latimes-table-stacker/#getting-started), then scroll down to <strong>"02. Build the example tables"</strong>
