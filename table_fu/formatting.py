@@ -183,10 +183,13 @@ def percentage(value, decimal_places=1, multiply=True):
     By default the number is multiplied by 100. You can prevent it from doing
     that by setting the `multiply` keyword argument to False.
     """
-    value = float(value)
-    if multiply:
-        value = value * 100
-    return _saferound(value, decimal_places) + '%'
+    try:
+        value = float(value)
+        if multiply:
+            value = value * 100
+        return _saferound(value, decimal_places) + '%'
+    except:
+        return ''
 
 
 def percent_change(value, decimal_places=1, multiply=True):
@@ -214,7 +217,7 @@ def percent_change(value, decimal_places=1, multiply=True):
         return s + '%'
 
 
-def short_ap_date(value, date_format=None):
+def short_ap_date(value, date_format=None, upper=False):
     """
     Reformats a date string as in an abbreviated AP format.
     
@@ -249,7 +252,10 @@ def short_ap_date(value, date_format=None):
         # and need a period added.
         if not dt.startswith("May"):
             dt = dt[:3] + "." + dt[3:]
-        date_list.append(dt)
+        if upper == True:
+            date_list.append(dt.upper())
+        else:
+            date_list.append(dt)
     return " &ndash; ".join(date_list)
 
 
