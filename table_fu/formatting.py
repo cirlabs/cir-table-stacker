@@ -189,7 +189,7 @@ def percentage(value, decimal_places=1, multiply=True):
             value = value * 100
         return _saferound(value, decimal_places) + '%'
     except:
-        return ''
+        return 'N/A'
 
 
 def percent_change(value, decimal_places=1, multiply=True):
